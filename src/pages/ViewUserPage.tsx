@@ -25,7 +25,7 @@ export default function ViewUserPage() {
   }, []);
 
   return (
-    <PlaceholderPanel title="View User" subtitle="Read-only details of a single directory record">
+    <PlaceholderPanel title={`${user.username ?? 'Unknown User'} (#${user.id ?? 0})`} subtitle="User details">
       {loading ? (
         <div className="p-8 text-center text-gray-500">Loading user data...</div>
       ) : error ? (
@@ -46,15 +46,29 @@ export default function ViewUserPage() {
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Website</dt>
           <dd className="text-gray-900 font-semibold">{user.website}</dd>
         </dl>
+        <h2>Address</h2>
         <dl className="text-sm">
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Street</dt>
-          <dd className="text-gray-900 font-semibold">{user.address.street}</dd>
+          <dd className="text-gray-900 font-semibold">{user.address?.street}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Suite</dt>
-          <dd className="text-gray-900 font-semibold">{user.address.suite}</dd>
+          <dd className="text-gray-900 font-semibold">{user.address?.suite}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">City</dt>
-          <dd className="text-gray-900 font-semibold">{user.address.city}</dd>
+          <dd className="text-gray-900 font-semibold">{user.address?.city}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Zipcode</dt>
-          <dd className="text-gray-900 font-semibold">{user.address.zipcode}</dd>
+          <dd className="text-gray-900 font-semibold">{user.address?.zipcode}</dd>
+          <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Latitude</dt>
+          <dd className="text-gray-900 font-semibold">{user.address?.geo?.lat}</dd>
+          <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Longitude</dt>
+          <dd className="text-gray-900 font-semibold">{user.address?.geo?.lng}</dd>
+        </dl>
+        <h2>Company</h2>
+        <dl className="text-sm">
+          <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Name</dt>
+          <dd className="text-gray-900 font-semibold">{user.company?.name}</dd>
+          <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Catchphrase</dt>
+          <dd className="text-gray-900 font-semibold">{user.company?.catchPhrase}</dd>
+          <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">BS</dt>
+          <dd className="text-gray-900 font-semibold">{user.company?.bs}</dd>
         </dl>
       </div>
       )}
