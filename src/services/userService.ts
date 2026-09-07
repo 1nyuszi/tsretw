@@ -10,6 +10,13 @@ export const userService = {
     return response.json();
   },
 
+  // GET: Fetch one user
+  async getUser(id: number): Promise<User> {
+    const response = await fetch(`${BASE_URL}/${id}`);
+    if (!response.ok) throw new Error('Failed to fetch user');
+    return response.json();
+  },
+
   // POST: Create new user
   async createUser(user: NewUserInput): Promise<User> {
     const response = await fetch(BASE_URL, {
