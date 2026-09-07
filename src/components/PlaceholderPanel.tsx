@@ -19,9 +19,6 @@ export default function PlaceholderPanel({ title, subtitle, children }: Placehol
 
       <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
         {children}
-        <p className="text-sm text-gray-400 italic">
-          This page is a placeholder — no functionality has been implemented yet.
-        </p>
         <Link
           to={paths.users()}
           className="inline-block text-sm font-medium text-blue-600 hover:text-blue-700"

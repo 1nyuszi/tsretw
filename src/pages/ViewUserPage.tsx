@@ -34,41 +34,41 @@ export default function ViewUserPage() {
       <div>
         <dl className="text-sm">
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">User ID</dt>
-          <dd className="text-gray-900 font-semibold">{user.id}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.id}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Name</dt>
-          <dd className="text-gray-900 font-semibold">{user.name}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.name}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Username</dt>
-          <dd className="text-gray-900 font-semibold">{user.username}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.username}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">E-mail</dt>
-          <dd className="text-gray-900 font-semibold">{user.email}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.email}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Phone</dt>
-          <dd className="text-gray-900 font-semibold">{user.phone}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.phone}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Website</dt>
-          <dd className="text-gray-900 font-semibold">{user.website}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.website}</dd>
         </dl>
-        <h2>Address</h2>
+        <h2 className="text-xl border-b-2 mb-2 text-red-500">Address</h2>
         <dl className="text-sm">
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Street</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.street}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.street}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Suite</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.suite}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.suite}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">City</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.city}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.city}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Zipcode</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.zipcode}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.zipcode}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Latitude</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.geo?.lat}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.geo?.lat}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Longitude</dt>
-          <dd className="text-gray-900 font-semibold">{user.address?.geo?.lng}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.address?.geo?.lng}</dd>
         </dl>
-        <h2>Company</h2>
+        <h2 className="text-xl border-b-2 mb-2 text-red-500">Company</h2>
         <dl className="text-sm">
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Name</dt>
-          <dd className="text-gray-900 font-semibold">{user.company?.name}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.company?.name}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">Catchphrase</dt>
-          <dd className="text-gray-900 font-semibold">{user.company?.catchPhrase}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.company?.catchPhrase}</dd>
           <dt className="text-xs font-medium text-gray-600 uppercase tracking-wider">BS</dt>
-          <dd className="text-gray-900 font-semibold">{user.company?.bs}</dd>
+          <dd className="text-gray-900 font-semibold pb-2">{user.company?.bs}</dd>
         </dl>
       </div>
       )}
