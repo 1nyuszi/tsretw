@@ -55,7 +55,7 @@ export type NewUserInput = Omit<User, 'id'>;
 
 
 9. src/services/userService.ts hozzáadása
-import { User, NewUserInput } from '../types/user';
+import type { User, NewUserInput } from '../types/user';
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com/users';
 
@@ -87,8 +87,9 @@ export const userService = {
 
 
 10. src/App.tsx lecserélése
-import React, { useEffect, useState } from 'react';
-import { User, NewUserInput } from './types/user';
+import { useEffect, useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
+import type { User, NewUserInput } from './types/user';
 import { userService } from './services/userService';
 
 export default function App() {
@@ -121,12 +122,12 @@ export default function App() {
   }, []);
 
   // Handle Input Changes
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   // Add User Handler
-  const handleAddUser = async (e: React.FormEvent) => {
+  const handleAddUser = async (e: FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) return;
 
